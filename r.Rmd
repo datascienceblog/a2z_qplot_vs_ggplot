@@ -1,0 +1,24 @@
+---
+title: "R is for read_"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The tidyverse is full of functions for reading data, beginning with "read_". The read_csv I've used to access my reads2019 data is one example, falling under the read_delim functions. read_tsv allows you to quickly read in tab-delimited files. And you can also read in files with other delimiters, using read_delim and specifying the delimiter used. You can also tell R if the file contains column names and whether those should be read in too, using **col_names = TRUE**.
+
+But there are many more read_ functions you can use:
+
+* read_clip: Data from the clipboard
+* read_+ dta, sas, or spss: Data from other statistical programs
+* read_json: JSON data
+* read_fwf: Fixed-width files
+* read_lines: Line from a file
+* read_excel: Excel files - you'll also need to include the worksheet name or number
+
+All of these functions are included as part of the tidyverse packages, though for some, you may need to load the single package if it doesn't automatically load with library(tidyverse) - this includes haven (for dta, sas, and spss) and readxl (for read_excel).
+
+You can find out more about a particular function by typing ?[functionname] into the R console. Or use ?? before to search all of R help for a particular string, such as ??read_.
+
